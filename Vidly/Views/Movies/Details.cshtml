@@ -10,8 +10,8 @@
 <h3>@Model.Name</h3>
 <ul>
     <li>Genre :@Model.Genres.Name</li>
-    <li>Realese Date :@Model.ReleaseDate</li>
-    <li>Date Added :@Model.DateAdded</li>
+    <li>Realese Date :@Model.ReleaseDate.ToString(string.Format("dddd, dd MMMM yyyy"))</li>
+    <li>Date Added :@Model.DateAdded.ToString(string.Format("dddd, dd MMMM yyyy"))</li>
     <li>Number in Stock :@Model.NumberInStock</li>
     
 </ul>
