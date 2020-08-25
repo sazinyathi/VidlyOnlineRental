@@ -5,6 +5,11 @@
 }
 
 <h2>Customers</h2>
+
+<p>
+    <a asp-action="CustomerForm">Create Customer</a>
+</p>
+<hr />
 <table class="table table-bordered">
     <thead>
         <th> Customer Name</th>
@@ -14,7 +19,7 @@
     @foreach (var customer in Model.ToList())
     {
         <tr>
-            <td>@Html.ActionLink(customer.Name,"Details","Customers",new {id =customer.Id },null)</td>
+            <td>@Html.ActionLink(customer.Name,"Edit","Customers",new {id =customer.Id },null)</td>
             <th>@customer.MembershipType.Name</th>
         </tr>
     }
