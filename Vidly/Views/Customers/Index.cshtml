@@ -5,11 +5,11 @@
 }
 
 <h2>Customers</h2>
-
-<p>
-    <a asp-action="CustomerForm">Create Customer</a>
-</p>
 <hr />
+<p>
+    @Html.ActionLink("New Customer", "New", null, new { @class = "btn btn-primary" })
+</p>
+
 <table class="table table-bordered">
     <thead>
         <th> Customer Name</th>

@@ -40,6 +40,17 @@ namespace Vidly.Controllers
         [HttpPost]
         public ActionResult Save(MovieViewModel movieViewModel)
         {
+            if (!ModelState.IsValid)
+            {
+                var genreTypes = applicationDbContext.Gernes.ToList();
+                var _movieViewModel = new MovieViewModel
+                {
+                   
+                    Movies = new Movie(),
+                    Genres = genreTypes
+                };
+                return View("MovieForm", _movieViewModel);
+            }
             var movie = new Movie
             {
               Name = movieViewModel.Movies.Name,

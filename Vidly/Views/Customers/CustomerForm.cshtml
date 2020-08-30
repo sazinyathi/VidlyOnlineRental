@@ -39,6 +39,9 @@
     <input type="submit" value="Save" class="btn btn-primary" />
 </div>
 
-
+@Html.AntiForgeryToken()
 }
 
+@section scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+    }
